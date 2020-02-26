@@ -1,6 +1,4 @@
-##############################################################################################
-root <- "~"
-setwd(root)
+#################################################################################
 root       <- paste0(getwd(),'/')
 gfcdwn_dir <- paste0(root,"downloads/gfc/2018/")
 rootdir     <- paste0(root,"GNQ_DD_14_18/")
@@ -12,7 +10,11 @@ seg_dir     <- paste0(data_dir,"segmentation/")
 edd_dir     <- paste0(data_dir,"dd_2004_2014_map/")
 stt_dir     <- paste0(data_dir,"stat/")
 map_dir     <- paste0(data_dir,"dd_2014_2018/")
+aoi_dir     <- paste0(data_dir,"aoi/")
 
+#############
+root <- "~"
+setwd(root)
 dir.create(scriptdir,showWarnings = F)
 dir.create(gfcdwn_dir,recursive=T,showWarnings = F)
 dir.create(data_dir,showWarnings = F)
@@ -22,6 +24,8 @@ dir.create(edd_dir,showWarnings = F)
 dir.create(stt_dir,showWarnings = F)
 dir.create(tmp_dir,showWarnings = F)
 dir.create(map_dir,showWarnings = F)
+dir.create(aoi_dir,showWarnings = F)
+
 ####################################################################################################
 #################### load packages
 source(paste0(scriptdir,'packages.R'))
@@ -87,3 +91,4 @@ pixel_count <- function(x){
   hist    <- data.frame(cbind(0:(length(buckets)-1),buckets))
   hist    <- hist[hist[,2]>0,]
 }
+
