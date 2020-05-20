@@ -108,3 +108,4 @@ Summary of data flow:
 3. `bioko3SEPAL5-80-11.shp` -> `seg_bioko.tif` (accomodated to the DD 2004-14 map)
 
 # GNQ_DD_14_18
+# GNQ_DD_14_18
