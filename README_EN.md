@@ -88,11 +88,11 @@ Si FF/DG(2004-14):
 
 ##### reclass_map_dd_20191002.R
 
-# 1- No stable forest
-# 2- Stable forest
-# 3- Degradation (joining classes 21-22)
-# 4- Deforestation (joining classes 31-32)
-# no data- the rest of the values (0-255)
+1- No stable forest
+2- Stable forest
+3- Degradation (joining classes 21-22)
+4- Deforestation (joining classes 31-32)
+no data- the rest of the values (0-255)
 
 FALTA CAMBIAR COLORES DE DEGRADACIÓN (NARANJA) Y DEFORESTACION (ROJO)
 (output: bioko_mapa_2014_2018_reclass.tif)
