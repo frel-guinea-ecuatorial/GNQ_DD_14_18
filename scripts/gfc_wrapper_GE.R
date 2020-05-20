@@ -89,7 +89,7 @@ for(countrycode in aoi_list){
         ))
         
         print(to_merge)
-      } #### END OF EXISTS MERGE
+      } #### END OF EXISTS MERGEseg
       
     } #### END OF MERGE TILES BY TYPE
     
