@@ -25,20 +25,20 @@ Clone el repositorio con el siguiente comando:
 
 En SEPAL vaya a Aplicaciones / Rstudio y debajo del directorio de clonación `GNQ_DD_14_18`, abra y` `` source () `` los siguientes scripts en `scrips`:
 
-##### config.R
+#### config.R
 Este script debe ejecutarse CADA VEZ que su sesión R se reinicie.
 Configurará los directorios de trabajo, cargará los paquetes (packages.R), los parámetros correctos (my_parameters.R) y el entorno de las variables.
 La primera vez que se ejecuta puede tardar unos minutos, ya que se pueden instalar los paquetes necesarios.
 Una vez que se ha ejecutado por primera vez, lleva unos segundos e inicializa todo.
 
-##### gfc_wrapper_GE.R
+#### gfc_wrapper_GE.R
 Descargará los mosaicos de datos necesarios del [repositorio de GFC] (https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.5.html), fusionará los mosaicos y los recortará en los cuadros que contienen los límites de Guinea Equatorial (GNQ) de la base de datos de las áreas administrativas globales (GADM) (https://uwaterloo.ca/library/geospatial/collections/us-and-world-geospatial-data-resources/global-administrative-areas-gadm).
 
 El resultado de las pérdidas forestales anuales entre 2000 y 2018 `gfc_GNQ_lossyear.tif` se guardará en` data/gfc/ `
 
 (Los resultados de la ganancia de cobertura forestal entre 2000 y 2012 `gfc_GNQ_gain.tif` y el porcentaje de cobertura arbórea de 2000 `gfc_GNQ_treecover2000.tif` también se guardarán en `data/gfc/`). 
 
-##### Import_data.R
+#### Import_data.R
 Importa los siguientes datos en formato ZIP desde Dropbox al directorio `data`:
 
 - Archivo de segmentación Landsat 2018 de Bioko `bioko3SEPAL5-80-11.zip` y archivo de segmentación Landsat 2018 de la Región Continental` continenteSEPAL5-80-11.zip` en `segmentación`.
@@ -50,7 +50,7 @@ Y los descomprime dentro de sus directorios correspondientes en formatos shapefi
 * Al final de este documento hay una descripción de cómo se realizaron los mosaicos y las segmentaciones de las imágenes Landsat 2018.
 ** La documentación sobre cómo se realizaron los mapas de deforestación y degradación forestal 2004-14 se encuentra en el documento 'Análisis histórico de la deforestación y degradación forestal en Guinea Ecuatorial 2004-2014' (http://www.fao.org/publications/card/es/c/CA3007ES/). 
 
-##### map_dd_20191014_Bioko.R
+#### map_dd_20191014_Bioko.R
 
 PREPARAR MAPA DE PRODUCTOS
 
@@ -104,7 +104,7 @@ Si FF / DG (2004-14):
 
 Producto: `bioko_mapa_2014_2018.tif`
 
-##### map_dd_20191014_Continente.R
+#### map_dd_20191014_Continente.R
 
 PREPARAR MAPA DE PRODUCTOS
 
@@ -132,7 +132,7 @@ Las mismas clases y reglas que el script anterior para Bioko.
 
 Producto: `continente_mapa_2014_2018.tif`
 
-##### reclass_map_dd_20191014_Bioko.R
+#### reclass_map_dd_20191014_Bioko.R
 
 RECLASIFICAR MAPA DE DEFORESTACIÓN Y DEGRADACIÓN DE 2014-18 `bioko_mapa_2014_2018.tif` EN:
 
@@ -148,7 +148,7 @@ Sin datos: el resto de los valores (0-255)
 
 Producto: `bioko_mapa_2014_2018_reclass.tif`
 
-##### reclass_map_dd_20191014_continente.R
+#### reclass_map_dd_20191014_continente.R
 
 RECLASIFICAR MAPA DE DEFORESTACIÓN Y DEGRADACIÓN DE 2014-18 `continente_mapa_2014_2018.tif` EN:
 
@@ -158,7 +158,7 @@ Producto: `continente_mapa_2014_2018_reclass.tif`
 
 -----------
 
-###### Resumen del flujo de datos:
+### Resumen del flujo de datos:
 
 MAPAS BASE
 
@@ -184,7 +184,7 @@ Bioko: `bioko_mapa_2014_2018.tif` (7 clases) ->` bioko_mapa_2014_2018_reclass.ti
 
 Continente: `continente_mapa_2014_2018.tif` (7 clases) ->` continente_mapa_2014_2018_reclass.tif` (4 clases)
 
-##### Creación de mosaicos Landsat 2018
+### Creación de mosaicos Landsat 2018
 
 En SEPAL abra la pestaña Proceso> Crear receta> Crear un mosaico con Landat o Sentinel2.
 
@@ -205,7 +205,7 @@ Los archivos de segmentación Landsat 2018 de Bioko `bioko3SEPAL5-80-11.shp` y d
 
 Los archivos de mosaico Landsat 2018 de Bioko `bioko3SEPAL_2019-07-25_543.tif` y de Región continental` sepal_eg_mainland2018-28-07.tif` se pueden descargar en formato zip desde: https://www.dropbox.com/s/whj42d3vn1ari8j/bioko3SEPAL_2019-07-25_543.zip?dl=0 y https://www.dropbox.com/s/26l98r4sxk8qcy6/sepal_eg_mainland2018-28-07.zip?dl=0 respectivamente.
 
-##### Segmentación de mosaicos Landsat 2018
+### Segmentación de mosaicos Landsat 2018
 
 En SEPAL abra la pestaña  Aplicaciones> GEO Processing Beta> Segmentación de imagenes
 
