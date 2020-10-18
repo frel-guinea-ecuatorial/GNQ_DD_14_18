@@ -1,4 +1,4 @@
-# GNQ_DD_14_18
+# GNQ_DD_13_18
 
 ##  Steps of the processing chain for the generation of FREL activity data for the Equatorial Guinea REDD+ process in English at README_EN
 
